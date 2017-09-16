@@ -1,0 +1,59 @@
+<div class="hero">
+	<div class="container">
+		<div class="row">
+			<div class="hero-heading">
+				CloudLab <br/>
+				The future of Audio Collaboration.
+				<p>Record. Loop. Share. </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6">
+				<form method="post" action="/search">
+					<div class="input-group input-group-lg">
+						<input type="text" class="form-control" name="search_input" placeholder="What are you searching?...">
+						<span class="input-group-btn">
+							<input type="submit" class="btn btn-success" value="Find Projects">
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container section">
+	<h1>
+		Newest Projects
+	</h1>
+		{{#each projects}}
+		<div class="col-md-3">
+			<div class="gig-card">
+				<a href="/project_service/{{ _id }}"><img src="/img/copywrite.jpg" /></a>
+				<h4>
+					{{ name }}
+				</h4>
+				<h3>
+					{{ category }}
+				</h3>
+			</div>
+		</div>
+		{{/each}}
+
+	</div>
+	<div class="container section">
+	<h1>
+		Newest Users
+	</h1>
+		{{#each users}}
+		<div class="col-md-3">
+			<div class="gig-card">
+				<h4>
+					{{ name }}
+					<img class="img-circle" src=" {{ photo }} "/>
+				</h4>
+			</div>
+		</div>
+		{{/each}}
+
+	</div>
+</div>
